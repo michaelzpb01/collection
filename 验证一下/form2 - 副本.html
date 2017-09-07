@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
+    <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+    <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
+
+    <style>
+        .error {
+            color: red;
+        }
+
+        input {
+            width: 300px;
+            height: 30px;
+            text-rendering: auto;
+            color: initial;
+            letter-spacing: normal;
+            word-spacing: normal;
+            text-transform: none;
+            text-indent: 0px;
+            text-shadow: none;
+            outline: none;
+            appearance: none;
+            border: none;
+            border: 1px solid #ccc;
+
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+<form action="" method="post" id="form" target="">
+    <input class="form-control" type="text" id="cash" name="cash">
+    <button type="button" id="btn_sub" class="btn btn-primary">确认</button>
+</form>
+</body>
+</html>
+
+<script>
+    function checkText(json) {
+        var even = json.even || 'input';
+        //是否选择限制小数点后两位
+        var dableDecimal = json.dableDecimal ? 2 : 1;
+        //最小值
+        var largeZero = json.largeZero ? 2 : 1;
+        //是否设置button
+        var button = json.button ? 2 : 1;
+
+        var buttonEven = json.buttonEven || 'click';
+        function findInArr(num, arr) {
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] == num) {
+                    return true;
+                }
+            }
+            return false;
+        }
+        function checkTextValue(_this){
+            val = _this.val();
+            //限制只能输入数字
+            _this.val(_this.val().replace(/[^\d\.\/]/ig, ''));
+            //大于min值
+            if (largeZero != 1) {
+                _this.val() == '' ? _this.val() : json.min && _this.val() < json.min && _this.val(json.min);
+            }
+            //默认小数点后两位可不使用
+            if (dableDecimal != 1) {
+                //console.log(dableDecimal)
+                _this.val(_this.val().replace(/^(\-)*(\d+)\.(\d\d).*$/, '$1$2.$3'));
+            }
+            if ((val >= 1 && val <= 1047) || val > 6498) {
+                //大于1小于1047或者大于6498
+                json.bothends && json.bothends();
+            } else if (val > 1047 && val <= 6498) {
+                //大于1047并且小于等于6498并且等于[1050,2090,3090,4090,5090]中的其中一项
+                json.limitArr && findInArr(val, json.limitArr) ? json.center && json.center() : json.centerError && json.centerError();
+
+            } else if (val == '') {
+                //为空
+                json.empty && json.empty();
+            }
+        }
+        console.log(button)
+        if (button != 1) {
+            // 有点击按钮
+            $(json.button).on(buttonEven, function () {
+                checkTextValue($(json.el));
+            });
+        }else{
+            // 没有点击按钮
+            $(json.el).on(even, function () {
+                checkTextValue($(this));
+            });
+        }
+
+    }
+    $(function () {
+        checkText({
+            el: '.form-control',// element
+            button:'#btn_sub',//有button则填写 没有则不填在自身验证
+            buttonEven:'click',//button事件
+            even: 'input',//可有可无默认input事件 可替换其他
+            limitArr: [1050, 2090, 3090, 4090, 5090],
+            min: 1,//不添加则可为负
+            dableDecimal: true,//小数点后两位 有默认值可不添加
+            largeZero: true,//是否大于零 默认大于零可不添加此项
+            bothends: function () {
+                //大于1小于1047或者大于6498
+                $('.form-control').css('background', 'red');
+            },
+            center: function () {
+                //大于1047并且小于等于6498并且等于[1050,2090,3090,4090,5090]中的其中一项
+                $('.form-control').css('background', 'green');
+            },
+            empty: function () {
+                //为空
+                console.log('kongde');
+            },
+            centerError:function () {
+                console.log('兄弟，输入这些[1050, 2090, 3090, 4090, 5090]中的其中一个才可以')
+            }
+        });
+    });
+</script>

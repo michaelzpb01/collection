@@ -1,0 +1,175 @@
+/*banner start*/
+
+.bx-wrapper{
+    position:relative;
+
+    padding:0
+}
+.banner .bx-wrapper{margin:0 auto 60px;}
+.banner .bx-wrapper img{
+    display:block;
+    position:absolute;
+    left:50%;
+    margin-left:-900px;
+}
+.bx-wrapper img{
+    display:block;
+    margin: 0 auto
+}
+
+.banner .bx-wrapper li{ height:460px;}
+.bx-wrapper .bx-viewport{
+    background:#fff;
+    -webkit-transform:translatez(0);
+    -moz-transform:translatez(0);
+    -ms-transform:translatez(0);
+    -o-transform:translatez(0);
+    transform:translatez(0)
+}
+
+.bx-wrapper .bx-controls-auto,.bx-wrapper .bx-pager{
+    position:absolute;
+
+    width:100%;
+    padding:0
+}
+.banner .bx-wrapper .bx-controls-auto,.banner .bx-wrapper .bx-pager{bottom:80px;}
+#fur-slider .bx-wrapper .bx-controls-auto,#fur-slider .bx-wrapper .bx-pager{bottom:15px;}
+.bx-wrapper .bx-loading{
+    min-height:50px;
+    background:url(../img/bx_loader.gif) center center no-repeat #fff;
+    height:100%;
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:2000
+}
+#fur-slider{ position:relative;}
+.bx-wrapper .bx-pager{
+    text-align:center;
+    font-size:.85em;
+    font-family:Arial;
+    font-weight:700;
+    color:#666;
+    padding-top:20px;
+    z-index:996;
+}
+
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item,.bx-wrapper .bx-pager .bx-pager-item{
+    float:left
+}
+
+.bx-pager.bx-default-pager a{
+    background:#dadada;
+    text-indent:-9999px;
+    display:block;
+    width:12px;
+    height:12px;
+    margin:0 5px;
+    outline:0;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px
+}
+.bx-pager{
+    text-align:center;
+    font-size:.85em;
+    font-family:Arial;
+    font-weight:700;
+    color:#666;
+    padding-top:20px;
+    z-index:3000
+}
+.bx-pager.bx-default-pager a {
+    text-indent: -9999px;
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin: 0px 5px;
+    outline: 0px none;
+    border-radius: 6px;
+    background: #DADADA none repeat scroll 0% 0%;
+}
+.bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:hover {
+    background: #F60 none repeat scroll 0% 0%;
+}
+#index-banner img {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 1800px;
+    margin-left: -900px;
+}
+#index-banner li {
+    width: 100% !important;
+}
+.banner .bx-wrapper {
+    width: 100% !important;
+}
+
+.banner {
+    position: relative;
+    height: 460px;
+    width: 100%;
+    overflow: hidden;
+    min-width:1220px;
+    text-align:center;
+}
+.banner .bx-controls-direction a {
+    background: url(../img/common.png) no-repeat 13px -206px;
+    display: block;
+    height: 160px;
+    width: 60px;
+
+    position: absolute;
+    top:50%;
+    margin-top:-80px;
+    text-indent: -99999px;
+}
+.banner .bx-controls-direction .bx-prev {
+    left: 0;
+    background: url(../img/common.png) no-repeat 13px -206px;
+}
+.banner .bx-controls-direction .bx-next {
+    background: url(../img/common.png) no-repeat -49px -206px;
+    right: 0;
+}
+.banner .bx-controls-direction .bx-prev:hover{
+    background:rgba(0,0,0,0.2) url(../img/common.png) no-repeat 13px -367px;
+    -webkit-border-radius:0 3px 3px 0;
+    -ms-border-radius:0 3px 3px 0;
+    -moz-border-radius:0 3px 3px 0;
+    border-radius:0 3px 3px 0
+}
+.banner .bx-controls-direction .bx-next:hover{
+    background:rgba(0,0,0,0.2) url(../img/common.png) no-repeat -49px -367px;
+    -webkit-border-radius:3px 0 0 3px;
+    -ms-border-radius:3px 0 0 3px;
+    -moz-border-radius:3px 0 0 3px;
+    border-radius:3px 0 0 3px
+}
+#fur-slider .bx-controls-direction a {
+    top:50%;
+    margin-top:-40px;
+    text-indent:-99999px;
+    outline: 0;
+    width: 38px;
+    height: 80px;
+    background-image: url(../img/brands-arrow.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    position:absolute;
+}
+#fur-slider .bx-controls-direction a:hover{
+    background-image:url(../img/brands-arrow-ov.png)
+}
+#fur-slider .bx-controls .bx-prev {
+    left: 0;
+    background-position: 0 0;
+}
+#fur-slider .bx-controls .bx-next {
+    right: 0;
+    background-position: 0 -80px;
+}
+/*banner end*/

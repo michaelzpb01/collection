@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="silder/css/silder.css">
+    <link rel="stylesheet" href="silder/css/reset.css">
+    <style>
+        .banner .bx-pager-item{
+            width:10px;
+            height:10px !important;
+            margin-right:10px;
+        }
+
+        .bx-wrapper .bx-pager{
+            bottom:30px !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <ul id="top-banner-ul" >
+            <li class="top-banner-img">
+                <a target="_blank" class="top-banner-link" href="javascript:;">
+                    <img src="http://image5.uzhuang.com/image/original/e1807021e00cu100ofng19.jpg">
+                </a>
+            </li>
+            <li class="top-banner-img">
+                <a target="_blank" class="top-banner-link" href="javascript:;">
+                    <img src="http://image4.uzhuang.com/image/original/5d76c021e00cu100op47a4.jpg">
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+    <div id="fur-slider">
+        <div class="bx-wrapper" style="width: 320px; height: 239px; overflow: hidden;">
+            <div class="bx-viewport">
+                <ul id="left-slider01" >
+                    <li class="slider-li" >
+                        <a target="_blank" href="http://www.uzhuang.com/index.php?v=listing&amp;cid=254&amp;page=68">
+                            <img src="http://image3.uzhuang.com/image/original/4bd4b020f409r100oa51ss.jpg" width="320" height="239">
+                        </a>
+                    </li>
+                    <li class="slider-li" >
+                        <a target="_blank" href="http://www.uzhuang.com/qingzhou666">
+                            <img src="http://image5.uzhuang.com/image/original/b2a96020ab06v100o46iv1.jpg" width="320" height="239">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
+<link rel="stylesheet" href="">
+<script src="silder/js/jquery-1.8.3.min.js"></script>
+<script src="silder/js/jquery.bxslider.min.js"></script>
+<script src="silder/js/silder.js"></script>
+<script>
+    $('#top-banner-ul').bxSlider({
+        mode: 'fade',
+        auto: true,
+    });
+    $('#left-slider01').bxSlider();
+</script>

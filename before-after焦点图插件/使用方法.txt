@@ -1,0 +1,11 @@
+before-after焦点图插件，可以拖动分割条查看对比图片，兼容主流浏览器，懒人图库推荐下载！
+
+使用方法：
+
+1、head区域引用头部必要的js和css代码
+2、在文件中加入<!-- 代码 开始 --><!-- 代码 结束 -->区域代码
+3、复制images文件夹里的图片到相应的路径
+4、src属性对应之前的图片，alt属性对应之后的图片
+<img src="images/beforeafter/8before.jpg" alt="images/beforeafter/8after.jpg" />
+
+*更多代码请访问：懒人图库 www.lanrentuku.com/js/

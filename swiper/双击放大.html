@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="swiper.min.css">
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+        list-style: none;
+    }
+
+    html, body {
+        position: relative;
+        height: 100%;
+    }
+    body {
+        background: #000;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+    }
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-slide {
+        overflow: hidden;
+        color: #fff;
+    }
+    .swiper-pagination{
+        color: #fff;
+    }
+</style>
+<body>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="swiper-zoom-container" >
+                silder1
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="swiper-zoom-container" >
+                silder2
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="swiper-zoom-container" >
+                silder3
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="swiper-zoom-container" >
+                silder4
+            </div>
+        </div>
+
+    </div>
+    <div class="swiper-pagination">
+    </div>
+</div>
+</body>
+</html>
+<script src="swiper.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        zoom: true,
+        pagination: '.swiper-pagination',
+        paginationType : 'fraction',
+        onReachEnd:function () {
+            console.log('reachend');
+            swiper.appendSlide('<div class="swiper-slide"><div class="swiper-zoom-container" >Slide ' + Math.random() + '</div></div>');
+        },
+        onTouchEnd:function () {
+            console.log('zuihouyige')
+        }
+    });
+</script>
+
+<script>
+
+//    var appendNumber = 4;
+//    var prependNumber = 1;
+//    var swiper = new Swiper('.swiper-container', {
+//        pagination: '.swiper-pagination',
+//        nextButton: '.swiper-button-next',
+//        prevButton: '.swiper-button-prev',
+//        slidesPerView: 3,
+//        centeredSlides: true,
+//        paginationClickable: true,
+//        spaceBetween: 30,
+//    });
+//    document.querySelector('.prepend-2-slides').addEventListener('click', function (e) {
+//        e.preventDefault();
+//        swiper.prependSlide([
+//            '<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>',
+//            '<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>'
+//        ]);
+//    });
+//    document.querySelector('.prepend-slide').addEventListener('click', function (e) {
+//        e.preventDefault();
+//        swiper.prependSlide('<div class="swiper-slide">Slide ' + (--prependNumber) + '</div>');
+//    });
+//    document.querySelector('.append-slide').addEventListener('click', function (e) {
+//        e.preventDefault();
+//        swiper.appendSlide('<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>');
+//    });
+//    document.querySelector('.append-2-slides').addEventListener('click', function (e) {
+//        e.preventDefault();
+//        swiper.appendSlide([
+//            '<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>',
+//            '<div class="swiper-slide">Slide ' + (++appendNumber) + '</div>'
+//        ]);
+//    });
+</script>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="JavaScript image viewer.">
+    <meta name="keywords" content="HTML, CSS, JS, JavaScript, image viewing, viewer, viewerjs, viewer.js, front-end, web development">
+    <meta name="author" content="Fengyuan Chen">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/viewer.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<style>
+    .docs-pictures{
+        width:1000px;
+        overflow: hidden;
+    }
+    .docs-pictures li{
+        width:100px;
+        height:100px;
+        margin:10px;
+        border:1px solid #ccc;
+        float: left;
+    }
+    .docs-pictures img{
+        width:100%;
+        height:100%;
+    }
+</style>
+<body>
+<!-- Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8 col-md-6">
+            <div class="docs-galley">
+                <ul class="docs-pictures clearfix">
+                    <li><img data-original="img/tibet-1.jpg" src="img/tibet-1.jpg" alt="Cuo Na Lake"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/viewer.js"></script>
+<script src="js/main.js"></script>
